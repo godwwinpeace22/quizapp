@@ -1,0 +1,18 @@
+extends layout
+block content
+	h2.text-center Add Questions
+	form(action="" method='post')
+		.form-group
+			input.form-control(type="text" name='theQuestion' placeholder='Enter the question' required)
+		.form-group
+			input.form-control(type="text" name='option1' placeholder="First Option" required)
+		.form-group
+			input.form-control(type="text" name='option2' placeholder="Second Option" required)
+		.form-group
+			input.form-control(type="text" name='option3' placeholder="Third Option" required)
+		.form-group
+			input.form-control(type="text" name='option4' placeholder="Fourth Option" required)
+		.form-group
+			input.form-control(type="text" name='theAnswer' placeholder="The answer" required)
+		.form-group
+			button.btn.btn-primary Submit question

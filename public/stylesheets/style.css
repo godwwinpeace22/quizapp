@@ -1,0 +1,100 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:#999;
+}
+
+a {
+  color: #00B7FF;
+}
+.disturb, .prevent{
+  width:100%;
+  height:400px;
+  background:transparent;
+  opacity: .9;
+  display:none;
+  position: fixed;
+  z-index: 999;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  left:40%;
+  width: 64px;
+  height: 64px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid #000;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.timer p:nth-of-type(2), .questNo p:nth-of-type(2){
+  background:#ddd;padding:6px;
+  border-bottom-right-radius:4px;
+  border-bottom-left-radius:4px;
+}
+button{
+  padding:100px;
+  margin-right:5px;
+}
+.btn[disabled]{
+  cursor: default;
+  opacity: 1;
+}
+.btn[disabled]:hover{
+  background-color:#555;
+  border-color:#555;
+  color:#fff;
+}
+.options[disabled]:hover{
+  background-color:#fff;
+  border-color:#fff;
+  color:#333;
+}
+.outer{
+  width:100%;
+  margin-bottom:5%;
+}
+.questNo, .timer{
+  width:130px;height:70px;background:#fff;border-radius:4px;
+}
+.inner{
+  width:100%;display:inline-block;margin-bottom:10px;
+}
+.option1, .option2, .option3, .option4{
+  width:40%;padding:20px 8px;text-align:left;margin-left:0px;
+  border-top-left-radius:0px;border-bottom-left-radius:0px;
+}
+.multi{
+  width:5%;background:#555;color:#fff;padding:20px 8px;margin-right:0px;border-color:#555;
+}
+.multi1{
+  border-top-right-radius:0px;border-bottom-right-radius:0px;
+}
+.multi2{
+  border-top-right-radius:0px;border-bottom-right-radius:0px;
+}

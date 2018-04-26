@@ -1,0 +1,16 @@
+extends layout
+block content
+	.header-nav-bgrd
+	.login.col-sm-6.col-sm-offset-3(style='height:500p;')
+		h3(style='color:#999;') Please #{title}
+		if msg
+			p.alert.alert-danger!=msg
+		form(method='POST', action='')
+			.form-group
+			input.form-control(name='username', type='text', placeholder='username', required)
+			.form-group
+			input.form-control(name='password', type='password', placeholder='password', required)
+			.form-group
+			input.btn.btn-primary(name='login', type='submit', value='Login')
+	script.
+		//-$('.login').css({height:$(window).height()-153 + 'px'});

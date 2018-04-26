@@ -1,0 +1,73 @@
+extends layout
+block content
+	nav.navbar.navbar-default
+		.container-fluid
+			.navbar-header
+				a.navbar-brand(href='#') WebSiteName
+			ul.nav.navbar-nav
+				li.active
+					a(href='#') Home
+				li.dropdown
+					a.dropdown-toggle(data-toggle='dropdown', href='#')
+						span.caret
+					ul.dropdown-menu
+						li
+							a(href='#') Page 1-1
+						li
+							a(href='#') Page 1-2
+						li
+							a(href='#') Page 1-3
+				li
+					a(href='#') Page 2
+				li
+					a(href='#') Page 3
+	h1.text-center StarQuiz
+	//p.text-center Welcome to the Quiz
+	.col-sm-10.col-sm-offset-1(style='background-color:;height:300px;margin-top:5%;')
+		.disturb
+			.lds-ring
+				div
+				div
+				div
+				div
+		.prevent
+		.header.col-sm-12.clearfix
+			.questNo.pull-left
+				p.text-center(style='font-size:2em;'): b#currQuestNo #{currQuestNo} / 4
+				//hr(style='margin-bottom:0px;margin-top:5px;')
+				p.text-center(style=''): b Question Number
+			.timer.pull-right
+				p#timer.text-center(style='font-size:2em;font-weight:bold;' timeStamp=timeStamp, serverTime=serverTime): b 2:00
+				p.text-center(style=''): b Timer
+			h3.text-center#thequestion.thequestion(style='color:#fff;') #{question[0].theQuestion}
+		section.col-sm-12(style='margin-top:10%;margin-bottom:10px;')
+			.inner
+				button.btn.btn-default.pull-left.multi.multi1(disabled) A
+				button.btn.btn-default.pull-left.options.option1(type='button' style='') #{question[0].option1}
+				button.btn.btn-default.pull-right.options.option2(type='button' style='') #{question[0].option2}
+				button.btn.btn-default.pull-right.multi.multi2(disabled) B
+			.inner
+				button.btn.btn-default.pull-left.multi.multi1(disabled) C
+				button.btn.btn-default.pull-left.options.option3(type='button' style='') #{question[0].option3}
+				button.btn.btn-default.pull-right.options.option4(type='button' style='') #{question[0].option4}
+				button.btn.btn-default.pull-right.multi.multi2(disabled) D
+			
+			h2.result
+			//span#questions(style='visibility:non;' value=question) #{question}
+			h4
+			//div.outer
+				div.inner
+					span: button.btn.btn-default A
+					span.option1
+				div.inner
+					span: button.btn.btn-default B
+					span.option2
+			//div.outer
+				div.inner
+					span: button.btn.btn-default C
+					span.option3
+				div.inner
+					span: button.btn.btn-default D
+					span.option4
+
+
